@@ -1,7 +1,7 @@
 import { Router, Request, Response } from 'express';
 import glob from 'glob';
-import { ValidationError, validationResult } from "express-validator";
-import httpStatus from "http-status";
+import { ValidationError, validationResult } from 'express-validator';
+import httpStatus from 'http-status';
 
 export function registerRoutes(router: Router) {
   const routes = glob.sync(__dirname + '/**/*.route.*');
