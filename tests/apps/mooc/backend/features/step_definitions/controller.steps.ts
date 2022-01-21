@@ -34,6 +34,7 @@ BeforeAll(async () => {
 
 AfterAll(async () => {
   const environmentArranger: Promise<EnvironmentArranger> = container.get('Mooc.EnvironmentArranger');
+  await (await environmentArranger).arrange();
   await (await environmentArranger).close();
   await application.stop();
 });
